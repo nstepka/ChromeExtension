@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "NSTEPKA'S POSH BOT",
+   "version": "1.0",
+   "background": {
+    "page": "background.html"
+
+   },
+   "browser_action": {
+      "default_icon": "icon-16.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "js/jquery.min.js", "background.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+
+    },
+    {
+      "js": [ "js/itemShare.js" ],
+      "matches": [ "https://poshmark.com/closet/*" ]
+   },
+   {
+     "js": [ "js/itemPage.js" ],
+     "matches": [ "https://poshmark.com/listing*" ]
+  },
+   {
+      "js": [ "js/sendOffers.js" ],
+      "matches": [ "https://poshmark.com/*" ]
+   }
+
+  ],
+
+    "permissions": [ "identity", "identity.email", "tabs", "<all_urls>", "storage", "https://www.googleapis.com/" ]
+  }
