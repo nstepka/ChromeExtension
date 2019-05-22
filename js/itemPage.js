@@ -28,10 +28,12 @@ function redirectBackToCloset() {
   wait(4000);
   chrome.storage.sync.get('sendOffers', function(offer) {
      var sendOffers = offer.sendOffers;
-     alert(sendOffers);
+  //   alert(sendOffers);
   chrome.storage.sync.get('closetPage', function(page) {
   var closetPage = page.closetPage;
 
+    sendOffers = 2;
+    chrome.storage.sync.set({'sendOffers' : sendOffers});
   window.location.href = closetPage;
 
   });
