@@ -1,45 +1,43 @@
 $(document).ready(function() {
+  wait(3000);
+  $('[data-pa-name="price_drop"]').each(function (index) { $(this).get(0).click() });
+  wait(1500);
+  $("a.btn.white.private").each(function (index) { $(this).get(0).click() });
+  wait(1500);
+  setTimeout($("#offer_to_likers_calculator").each(function (index) { $(this).get(0).click() }), 5000);
+  wait(1500);
+  //offerToLikers();
 //offerDiscount();
-  var discountPercent = .9;
-  wait(1000);
-  redirectBackToCloset();
+  // var discountPercent = .9;
+  // wait(1500);
+  //  $('[data-pa-name="price_drop"]')[0].click();
+  //  wait(1500);
+  //  $("a.btn.white.private")[0].click();
+  //  wait(1500);
+  //  $("#offer_to_likers_calculator").each(function (index) { $(this).get(0).click() });
+  //  wait(1500);
+  //  $(".offer_button")[2].click();
+  //  $('[data-pa-name="apply_offer"]')[0].click();
+  //  wait(1500);
+  //  $("#shipping-discount-selection")[0].click();
+  //  wait(1500);
+  //  $("#bundle_offer_form > div.modal-body > div.offer-container > div > div > div:nth-child(3) > div > div.dropdown-menu > div:nth-child(1)").click();
+  //  wait(1500);
+  //  $("#bundle_offer_form > div.modal-footer > button.btn.blue").click();
+  //  wait(1500);
+  //  $("#offer-congrats-popup > div > div.modal-footer > a")[0].click();
+
+//  redirectBackToCloset();
 
 });
 
-function offerToLikers() {
-  // $("a.btn.white.private")[0].click();
-  // }
-  // function clickCalc() {
-  //   $("#offer_to_likers_calculator").each(function (index) { $(this).get(0).click() });
-  //   wait(1500);
-  //   $(".offer_button")[2].click();
-  //   wait(1500);
-  //
-  //   $('[data-pa-name="apply_offer"]')[0].click();
-  //   wait(1500);
-  //   $("#shipping-discount-selection")[0].click();
-  //   wait(1500);
-  //   document.querySelector("#bundle_offer_form > div.modal-body > div.offer-container > div > div > div:nth-child(3) > div > div.dropdown-menu > div:nth-child(1)").click();
-  //   wait(1000);
-  //   document.querySelector("#bundle_offer_form > div.modal-footer > button.btn.blue").click();
 
-    }
-function redirectBackToCloset() {
-  wait(4000);
-  chrome.storage.sync.get('itemCounter', function(counter) {
-     var itemCounter = parseInt(counter.itemCounter) + 1;
-  //   alert(sendOffers);
-  chrome.storage.sync.get('closetPage', function(page) {
-  var closetPage = page.closetPage;
-    //
-    // sendOffers = 2
-  chrome.storage.sync.set({'itemCounter' : itemCounter});
-  window.location.href = closetPage;
 
-  });
-  });
-}
-// function offerDiscount() {
+
+
+
+
+function offerDiscount() {
 //
 // //  alert($(".btn.white").first().text());
 //     //var aTags = document.getElementsByClassName("btn white");
@@ -47,16 +45,25 @@ function redirectBackToCloset() {
 //     //var found = $('[data-pa-name="price_drop"]').text();
 //
 //   //  console.log(`${found} is a thing`)
-//     $('[data-pa-name="price_drop"]')[0].click();
-//
-//     setTimeout(offerToLikers, 2000);
+    console.log('hello!');
+    wait(1000);
+     $('[data-pa-name="price_drop"]').each(function (index) { $(this).get(0).click() });
+
+     console.log('hell123123o!');
+// //
+     wait(1000);
+     setTimeout(offerToLikers, 2000);
+     wait(1000);
+//   wait(1000);
+  //  setTimeout(clickCalc, 3000);
+    wait(4000);
+
 //     wait(1000);
-//     setTimeout(clickCalc, 5000);
 //
 //
 //
 //
-//
+//y
 //
 //
 //     //------------------------^^^WORKING
@@ -89,6 +96,53 @@ function redirectBackToCloset() {
 //   //    $("main.experiences-header:nth-child(7) div:nth-child(1) div.modal.fade.hide.in:nth-child(9) div.modal-body div.modal-footer > a.btn.blue").click();
 //  }
 
+}
+
+function offerToLikers() {
+   $("a.btn.white.private").each(function (index) { $(this).get(0).click() });
+   }
+
+   function clickCalc() {
+     $("#offer_to_likers_calculator")
+     wait(1500);
+     $(".offer_button")[2].click();
+     $('[data-pa-name="apply_offer"]')[0].each(function (index) { $(this).get(0).click() });
+     wait(3000);
+     $("#shipping-discount-selection").each(function (index) { $(this).get(0).click() });
+     wait(1500);
+     $("#bundle_offer_form > div.modal-body > div.offer-container > div > div > div:nth-child(3) > div > div.dropdown-menu > div:nth-child(1)").each(function (index) { $(this).get(0).click() });
+     wait(1500);
+     $("#bundle_offer_form > div.modal-footer > button.btn.blue").each(function (index) { $(this).get(0).click() });
+     wait(1500);
+     //$("#offer-congrats-popup > div > div.modal-footer > a")[0].click();
+
+     //   $(".offer_button")[2].click();
+     //   wait(1500);
+     //
+     //   $('[data-pa-name="apply_offer"]')[0].click();
+     //   wait(1500);
+     //   $("#shipping-discount-selection")[0].click();
+     //   wait(1500);
+     //   document.querySelector("#bundle_offer_form > div.modal-body > div.offer-container > div > div > div:nth-child(3) > div > div.dropdown-menu > div:nth-child(1)").click();
+     //   wait(1000);
+     //   document.querySelector("#bundle_offer_form > div.modal-footer > button.btn.blue").click();
+   }
+
+   function redirectBackToCloset() {
+
+     chrome.storage.sync.get('itemCounter', function(counter) {
+        var itemCounter = parseInt(counter.itemCounter) + 1;
+     //   alert(sendOffers);
+     chrome.storage.sync.get('closetPage', function(page) {
+     var closetPage = page.closetPage;
+       //
+       // sendOffers = 2
+     chrome.storage.sync.set({'itemCounter' : itemCounter});
+     window.location.href = closetPage;
+
+     });
+     });
+   }
 
  function wait(ms){
     var start = new Date().getTime();
@@ -96,6 +150,4 @@ function redirectBackToCloset() {
     while(end < start + ms) {
       end = new Date().getTime();
    }
-
-
- }
+}
