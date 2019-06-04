@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "NSTEPKA'S POSH BOT",
-   "version": "1.0",
+   "version": "1.1",
    "background": {
     "page": "background.html"
 
@@ -21,11 +21,11 @@
    },
    {
      "js": [ "js/itemPage.js" ],
-     "matches": [ "https://poshmark.com/listing*" ]
+     "matches": [ "https://poshmark.com/listing/*" ]
   },
    {
       "js": [ "js/sendOffers.js" ],
-      "matches": [ "https://poshmark.com/*" ]
+      "matches": [ "https://poshmark.com/closet/*" ]
    }
 
   ],
