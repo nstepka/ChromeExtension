@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <style type="text/css">
 
@@ -229,13 +229,13 @@
     <div class="content">
       <div class="console flex">
         <div class="console--window">
-          <ol id="consoleWindow">
+          <ol id="displayBoard">
           </ol>
         </div>
         <button class="blue-bg" id="clearConsole" style="margin-right: 3px; margin-top: 5px; width: 255px; padding: 6px;">Clear Console</button>
       </div>
 
-      <div class="buttons">
+      <d  iv class="buttons">
         <div class="module">
           <span class="flex">
             <img class="icon" src="images/gear.svg">
@@ -244,13 +244,13 @@
           <p>Delay in seconds between actions (will choose a random number between the min & max)</p>
 
           <span class="flex">
-            <p>Min:</p><input type="number" min="3" id="shareTimeMinimum" style="width: 50px;">
-            <p>Max:</p><input type="number" min="5" id="shareTimeMaximum" style="width: 50px;">
+            <p>Min:</p><input type="number" min="3" id="shareTimeMin" style="width: 50px;">
+            <p>Max:</p><input type="number" min="5" id="shareTimeMax" style="width: 50px;">
           </span>
           <br>
           <span class="flex center">
-            <button class="green-bg" id="startSharing">Start<img class="smallicon" src="images/play.svg" /></button>
-            <button class="blue-bg" id="stopSharing">Stop<img class="smallicon" src="images/stop.svg" /></button>
+            <button class="green-bg" id="shareCloset" >Start<img class="smallicon" src="images/play.svg" /></button>
+            <button class="blue-bg" id="stopSharingCloset"  style="display: none;">Stop<img class="smallicon" src="images/stop.svg" /></button>
           </span>
 
       </div>
@@ -263,12 +263,16 @@
         <!-- <p>Shares items on page (skips sold items & Meet the Posher listings).</p> -->
 
         <span>
-          <p> Enter the Discount you would like to send to likers:</p>
-          <input type="number" min="10" id="discountPercent" style="width: 50px;">
-        </span>
+</span>
+<p>What discount percent do you wan to send?</p>
+  <input type="radio" name="discountPercent" id="discountPercent" value="10" checked> 10% discount<br>
+  <input type="radio" name="discountPercent" id="discountPercent" value="20"> 20% discount<br>
+  <input type="radio" name="discountPercent" id="discountPercent" value="30"> 30% discount<br>
+
         <br><br>
         <span class="flex center">
           <button class="green-bg" id="sendOffers">Start<img class="smallicon" src="images/play.svg" /></button>
+          <button class="blue-bg" id="stopOffers"  style="display: none;">Stop<img class="smallicon" src="images/stop.svg" /></button>
         </span>
       </div>
 
